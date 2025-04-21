@@ -1,0 +1,769 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>𝐊𝐞𝐯𝐢𝐧_𝐣𝐚𝐬𝐚_𝐬𝐨𝐬𝐦𝐞𝐝.𝐢𝐝 - Beranda</title>
+     <style>
+         body {
+             font-family: 'Arial', sans-serif;
+             margin: 0;
+             padding: 0;
+             color: #fff;
+             line-height: 1.6;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: flex-start;
+             min-height: 100vh;
+             background-image: url("https://f.top4top.io/p_3398pe2us0.png");
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-position: center center;
+             background-attachment: fixed;
+             box-sizing: border-box;
+         }
+
+         .kotak-atas {
+             position: fixed;
+             top: 0;
+             left: 0;
+             width: 100%;
+             background-color: #007bff;
+             z-index: 99;
+             padding: 10px 0;
+             box-sizing: border-box;
+             margin: 0;
+         }
+
+         .kotak-atas .container {
+             max-width: 1200px;
+             width: 90%;
+             margin: 0 auto;
+             padding: 0 20px;
+             box-sizing: border-box;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+         }
+
+         header {
+             background-color: transparent;
+             padding: 0;
+             margin-bottom: 20px;
+             border-bottom: 1px solid #333;
+             width: 100%;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             box-sizing: border-box;
+         }
+
+         header .container {
+             max-width: 1200px;
+             width: 90%;
+             margin: 0 auto;
+             padding: 10px 15px 0;
+             display: flex;
+             flex-direction: column;
+             justify-content: flex-start;
+             align-items: flex-start;
+             box-sizing: border-box;
+         }
+
+         .logo {
+             font-size: 1.8em;
+             font-weight: bold;
+             color: white;
+             margin-bottom: 10px;
+         }
+
+         .search-bar {
+             display: flex;
+             width: 100%;
+             margin-bottom: 10px;
+             box-sizing: border-box;
+         }
+
+         .search-bar input[type="text"] {
+             padding: 10px;
+             border: 1px solid #2980b9;
+             border-radius: 5px 0 0 5px;
+             width: calc(100% - 65px);
+             font-size: 1em;
+             background-color: #3498db;
+             color: white;
+             box-sizing: border-box;
+         }
+
+         .search-bar button {
+             background-color: #2980b9;
+             color: white;
+             border: none;
+             padding: 10px 15px;
+             border-radius: 0 5px 5px 0;
+             cursor: pointer;
+             font-size: 1em;
+             transition: background-color 0.3s ease;
+             box-sizing: border-box;
+         }
+
+         .user-actions {
+             display: flex;
+             align-items: center;
+             margin-top: 10px;
+         }
+
+         .user-actions a {
+             margin-left: 20px;
+             text-decoration: none;
+             color: #eee;
+             font-size: 1em;
+         }
+
+         .user-actions a:hover {
+             color: #fff;
+         }
+
+         .user-actions .cart {
+             font-weight: bold;
+             cursor: pointer;
+         }
+
+         main {
+             padding: 20px 0;
+             width: 100%;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             margin-top: 60px;
+             box-sizing: border-box;
+         }
+
+         .introduction {
+             background-color: transparent;
+             color: #fff;
+             padding: 20px;
+             border-radius: 8px;
+             margin-bottom: 20px;
+             text-align: center;
+             width: 90%;
+             margin-left: auto;
+             margin-right: auto;
+             box-sizing: border-box;
+         }
+
+         .introduction h1 {
+             font-size: 2em;
+             margin-bottom: 10px;
+             color: #ff5722;
+         }
+
+         .introduction p {
+             font-size: 1.1em;
+             line-height: 1.7;
+             margin-bottom: 15px;
+         }
+
+         .introduction strong {
+             font-weight: bold;
+             color: #ff5722;
+         }
+
+         main .container {
+             max-width: 1200px;
+             width: 90%;
+             margin: 0 auto;
+             padding: 20px;
+             background-color: transparent;
+             border-radius: 8px;
+             box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             box-sizing: border-box;
+         }
+
+         main .container h2 {
+             margin-bottom: 20px;
+             color: #eee;
+             border-bottom: 2px solid #ff5722;
+             padding-bottom: 10px;
+             width: fit-content;
+         }
+
+         .product-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+             gap: 20px;
+             width: 100%;
+             background-color: transparent;
+             box-sizing: border-box;
+         }
+
+         @media (max-width: 767px) {
+             .product-grid {
+                 grid-template-columns: repeat(2, 1fr);
+             }
+         }
+
+         .product-card {
+             background-image: url("https://f.top4top.io/p_3398pe2us0.png");
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-position: center;
+             border-radius: 8px;
+             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+             padding: 15px;
+             text-align: center;
+             transition: transform 0.2s ease-in-out;
+             color: #fff;
+             box-sizing: border-box;
+         }
+
+         .product-card:hover {
+             transform: translateY(-5px);
+         }
+
+         .product-card img {
+             max-width: 80%;
+             height: auto;
+             border-radius: 4px;
+             margin-bottom: 15px;
+             aspect-ratio: 1 / 1;
+             object-fit: contain;
+         }
+
+         .product-card h3 {
+             margin-top: 0;
+             margin-bottom: 5px;
+             font-size: 1.2em;
+             font-weight: bold;
+             color: #fff;
+             white-space: nowrap;
+             overflow: hidden;
+             text-overflow: ellipsis;
+         }
+
+         .product-card .price {
+             color: #dc3545;
+             font-weight: bold;
+             font-size: 1.3em;
+             margin-bottom: 10px;
+         }
+
+         .product-card .add-to-cart {
+             background-color: #28a745;
+             color: white;
+             border: none;
+             padding: 10px 20px;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 1em;
+             transition: background-color 0.3s ease;
+             box-sizing: border-box;
+         }
+
+         .product-card .add-to-cart:hover {
+             background-color: #1e7e34;
+         }
+
+         .modal {
+             display: none;
+             position: fixed;
+             z-index: 1;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 100%;
+             overflow: auto;
+             background-color: rgba(0,0,0,0.8);
+             z-index: 999;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             box-sizing: border-box;
+         }
+
+         .modal-content {
+             background-color: #333;
+             margin: 15% auto;
+             padding: 20px;
+             border: 1px solid #555;
+             width: 80%;
+             border-radius: 8px;
+             position: relative;
+             color: #eee;
+             box-sizing: border-box;
+         }
+
+         .close-button {
+             color: #aaa;
+             position: absolute;
+             top: 10px;
+             right: 15px;
+             font-size: 28px;
+             font-weight: bold;
+             cursor: pointer;
+         }
+
+         .close-button:hover,
+         .close-button:focus {
+             color: #fff;
+             text-decoration: none;
+         }
+
+         #cart-items {
+             list-style-type: none;
+             padding: 0;
+         }
+
+         #cart-items li {
+             padding: 10px 0;
+             border-bottom: 1px solid #555;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             color: #eee;
+             box-sizing: border-box;
+         }
+
+         #cart-items li:last-child {
+             border-bottom: none;
+         }
+
+         #cart-total {
+             font-weight: bold;
+             margin-top: 20px;
+             text-align: right;
+             color: #fff;
+         }
+
+         #checkout-button {
+             background-color: #007bff;
+             color: white;
+             border: none;
+             padding: 10px 20px;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 1em;
+             margin-top: 20px;
+             float: right;
+             transition: background-color 0.3s ease;
+             box-sizing: border-box;
+         }
+
+         #checkout-button:hover {
+             background-color: #0056b3;
+         }
+
+         .remove-from-cart {
+             background-color: #dc3545;
+             color: white;
+             border: none;
+             padding: 5px 10px;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 0.9em;
+             transition: background-color 0.3s ease;
+             box-sizing: border-box;
+         }
+
+         .remove-from-cart:hover {
+             background-color: #c82333;
+         }
+
+         #checkout-form {
+             margin-top: 20px;
+             color: #eee;
+             box-sizing: border-box;
+         }
+
+         #checkout-form label {
+             display: block;
+             margin-bottom: 5px;
+             font-weight: bold;
+         }
+
+         #checkout-form input[type="text"],
+         #checkout-form input[type="tel"],
+         #checkout-form textarea {
+             width: calc(100% - 12px);
+             padding: 8px;
+             margin-bottom: 15px;
+             border: 1px solid #555;
+             border-radius: 4px;
+             box-sizing: border-box;
+             font-size: 1em;
+             background-color: #444;
+             color: #fff;
+         }
+
+         #send-to-telegram {
+             background-color: #007bff;
+             color: white;
+             border: none;
+             padding: 10px 20px;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 1em;
+             transition: background-color 0.3s ease;
+             box-sizing: border-box;
+         }
+
+         #send-to-telegram:hover {
+             background-color: #0056b3;
+         }
+     </style>
+ </head>
+ <body>
+     <header>
+         <div class="kotak-atas">
+             <div class="container">
+                 <div class="logo">𝐊𝐞𝐯𝐢𝐧_𝐣𝐚𝐬𝐚_𝐬𝐨𝐬𝐦𝐞𝐝.𝐢𝐝</div>
+                 <div class="search-bar">
+                     <input type="text" placeholder="Cari produk...">
+                     <button type="submit">Cari</button>
+                 </div>
+                 <div class="user-actions">
+                     <a href="#">Masuk</a>
+                     <a href="#">Daftar</a>
+                     <a href="#" class="cart">Keranjang (<span id="cart-item-count">0</span>)</a>
+                 </div>
+             </div>
+         </div>
+     </header>
+     <div class="introduction">
+         <h1>Selamat Datang di 𝐊𝐞𝐯𝐢𝐧_𝐣𝐚𝐬𝐚_𝐬𝐨𝐬𝐦𝐞𝐝.𝐢𝐝 - Solusi Terbaik untuk Pertumbuhan Sosial Media Anda!</h1>
+         <p>Halo! Saya <strong>𝐊𝐞𝐯𝐢𝐧_𝐣𝐚𝐬𝐚_𝐬𝐨𝐬𝐦𝐞𝐝.𝐢𝐝</strong>, dan saya sangat antusias untuk membantu Anda meraih kesuksesan di platform sosial media. Di era digital yang serba cepat ini, memiliki kehadiran online yang kuat adalah kunci untuk menjangkau audiens yang lebih luas, membangun merek yang solid, dan mencapai tujuan Anda.</p>
+         <p>𝐊𝐞𝐯𝐢𝐧_𝐣𝐚𝐬𝐚_𝐬𝐨𝐬𝐦𝐞𝐝.𝐢𝐝 hadir sebagai solusi terpercaya untuk meningkatkan visibilitas dan engagement akun sosial media Anda. Kami menyediakan layanan <strong>peningkatan follower Instagram dan TikTok yang berkualitas dan terjangkau</strong>, dirancang untuk memberikan Anda keunggulan kompetitif dan mempercepat pertumbuhan akun Anda secara signifikan.</p>
+         <p>Lihatlah berbagai pilihan paket kami di bawah ini dan temukan solusi yang paling sesuai dengan kebutuhan dan anggaran Anda. Bersama 𝐊𝐞𝐯𝐢𝐧_𝐣𝐚𝐬𝐚_𝐬𝐨𝐬𝐦𝐞𝐝.𝐢𝐝, mari kita wujudkan potensi penuh sosial media Anda!</p>
+     </div>
+
+     <h2>Produk Pilihan</h2>
+     <main class="container">
+         <div class="product-grid">
+             <div class="product-card" data-product-id="1" data-product-name="100 Follower Tiktok" data-product-price="5000">
+                 <img src="https://a.top4top.io/p_3398bmg4b0.png" alt="100 Follower Tiktok">
+                 <h3>100 Follower Tiktok</h3>
+                 <p class="price">Rp 5.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="7" data-product-name="100 Follower Instagram" data-product-price="5000">
+                 <img src="https://h.top4top.io/p_3398nvv220.png" alt="100 Follower Instagram">
+                 <h3>100 Follower Instagram</h3>
+                 <p class="price">Rp 5.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="2" data-product-name="200 Follower Tiktok" data-product-price="10000">
+                 <img src="https://a.top4top.io/p_3398bmg4b0.png" alt="200 Follower Tiktok">                 <h3>200 Follower Tiktok</h3>
+                 <p class="price">Rp 10.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="8" data-product-name="200 Follower Instagram" data-product-price="10000">
+                 <img src="https://h.top4top.io/p_3398nvv220.png" alt="200 Follower Instagram">
+                 <h3>200 Follower Instagram</h3>
+                 <p class="price">Rp 10.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="3" data-product-name="300 Follower Tiktok" data-product-price="15000">
+                 <img src="https://a.top4top.io/p_3398bmg4b0.png" alt="300 Follower Tiktok">
+                 <h3>300 Follower Tiktok</h3>
+                 <p class="price">Rp 15.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="9" data-product-name="300 Follower Instagram" data-product-price="15000">
+                 <img src="https://h.top4top.io/p_3398nvv220.png" alt="300 Follower Instagram">
+                 <h3>300 Follower Instagram</h3>
+                 <p class="price">Rp 15.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="4" data-product-name="400 Follower Tiktok" data-product-price="20000">
+                 <img src="https://a.top4top.io/p_3398bmg4b0.png" alt="400 Follower Tiktok">
+                 <h3>400 Follower Tiktok</h3>
+                 <p class="price">Rp 20.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="10" data-product-name="400 Follower Instagram" data-product-price="20000">
+                 <img src="https://h.top4top.io/p_3398nvv220.png" alt="400 Follower Instagram">
+                 <h3>400 Follower Instagram</h3>
+                 <p class="price">Rp 20.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="5" data-product-name="500 Follower Tiktok" data-product-price="25000">
+                 <img src="https://a.top4top.io/p_3398bmg4b0.png" alt="500 Follower Tiktok">
+                 <h3>500 Follower Tiktok</h3>
+                 <p class="price">Rp 25.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="11" data-product-name="500 Follower Instagram" data-product-price="25000">
+                 <img src="https://h.top4top.io/p_3398nvv220.png" alt="500 Follower Instagram">
+                 <h3>500 Follower Instagram</h3>
+                 <p class="price">Rp 25.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="6" data-product-name="1000 Follower Tiktok" data-product-price="45000">
+                 <img src="https://a.top4top.io/p_3398bmg4b0.png" alt="1000 Follower Tiktok">
+                 <h3>1000 Follower Tiktok</h3>
+                 <p class="price">Rp 45.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="12" data-product-name="1000 Follower Instagram" data-product-price="45000">
+                 <img src="https://h.top4top.io/p_3398nvv220.png" alt="1000 Follower Instagram">
+                 <h3>1000 Follower Instagram</h3>
+                 <p class="price">Rp 45.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="13" data-product-name="100 Like + 1000 View Tiktok" data-product-price="1000">
+                 <img src="https://a.top4top.io/p_3398bmg4b0.png" alt="100 Like + 1000 View Tiktok">
+                 <h3>100 Like + 1000 View Tiktok</h3>
+                 <p class="price">Rp 1.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="18" data-product-name="100 Like + 1000 View Instagram" data-product-price="1000">
+                 <img src="https://h.top4top.io/p_3398nvv220.png" alt="100 Like + 1000 View Instagram">
+                 <h3>100 Like + 1000 View Instagram</h3>
+                 <p class="price">Rp 1.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="14" data-product-name="200 Like + 2000 View Tiktok" data-product-price="2000">
+                 <img src="https://a.top4top.io/p_3398bmg4b0.png" alt="200 Like + 2000 View Tiktok">
+                 <h3>200 Like + 2000 View Tiktok</h3>
+                 <p class="price">Rp 2.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="19" data-product-name="200 Like + 2000 View Instagram" data-product-price="2000">
+                 <img src="https://h.top4top.io/p_3398nvv220.png" alt="200 Like + 2000 View Instagram">
+                 <h3>200 Like + 2000 View Instagram</h3>
+                 <p class="price">Rp 2.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="15" data-product-name="300 Like + 3000 View Tiktok" data-product-price="3000">
+                 <img src="https://a.top4top.io/p_3398bmg4b0.png" alt="300 Like + 3000 View Tiktok">
+                 <h3>300 Like + 3000 View Tiktok</h3>
+                 <p class="price">Rp 3.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="20" data-product-name="300 Like + 3000 View Instagram" data-product-price="3000">
+                 <img src="https://h.top4top.io/p_3398nvv220.png" alt="300 Like + 3000 View Instagram">
+                 <h3>300 Like + 3000 View Instagram</h3>
+                 <p class="price">Rp 3.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="16" data-product-name="400 Like + 4000 View Tiktok" data-product-price="4000">
+                 <img src="https://a.top4top.io/p_3398bmg4b0.png" alt="400 Like + 4000 View Tiktok">
+                 <h3>400 Like + 4000 View Tiktok</h3>
+                 <p class="price">Rp 4.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="21" data-product-name="400 Like + 4000 View Instagram" data-product-price="4000">
+                 <img src="https://h.top4top.io/p_3398nvv220.png" alt="400 Like + 4000 View Instagram">
+                 <h3>400 Like + 4000 View Instagram</h3>
+                 <p class="price">Rp 4.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="17" data-product-name="500 Like + 5000 View Tiktok" data-product-price="5000">
+                 <img src="https://a.top4top.io/p_3398bmg4b0.png" alt="500 Like + 5000 View Tiktok">
+                 <h3>500 Like + 5000 View Tiktok</h3>
+                 <p class="price">Rp 5.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+             <div class="product-card" data-product-id="22" data-product-name="500 Like + 5000 View Instagram" data-product-price="5000">
+                 <img src="https://h.top4top.io/p_3398nvv220.png" alt="500 Like + 5000 View Instagram">
+                 <h3>500 Like + 5000 View Instagram</h3>
+                 <p class="price">Rp 5.000</p>
+                 <button class="add-to-cart">Tambah</button>
+             </div>
+         </div>
+
+         <div id="cart-modal" class="modal" style="display: none;">
+             <div class="modal-content">
+                 <span class="close-button">&times;</span>
+                 <h2>Keranjang Belanja Anda</h2>
+                 <ul id="cart-items">
+                 </ul>
+                 <p id="cart-total">Total: Rp 0</p>
+
+                 <div id="checkout-form" style="display: none;">
+                     <h2>Isi Detail Pengiriman</h2>
+                     <label for="nama">𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 𝙏𝙄𝙆𝙏𝙊𝙆/𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈</label><br>
+                     <input type="text" id="nama" name="nama" required><br><br>
+                     <label for="alamat">𝐀𝐥𝐚𝐦𝐚𝐭:</label><br>
+                     <textarea id="alamat" name="alamat" rows="3" required></textarea><br><br>
+                     <label for="whatsapp">𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 :</label><br>
+                     <input type="tel" id="whatsapp" name="whatsapp" required><br><br>
+                     <button id="send-to-telegram">Kirim Pesanan</button>
+                 </div>
+
+                 <button id="checkout-button">Checkout</button>
+             </div>
+         </div>
+     </main>
+
+     <script>
+         document.addEventListener('DOMContentLoaded', function() {
+             const addToCartButtons = document.querySelectorAll('.add-to-cart');
+             const cartItemCountSpan = document.getElementById('cart-item-count');
+             const cartLink = document.querySelector('.cart');
+             const cartModal = document.getElementById('cart-modal');
+             const closeButton = document.querySelector('.close-button');
+             const cartItemsList = document.getElementById('cart-items');
+             const cartTotalElement = document.getElementById('cart-total');
+             const checkoutButton = document.getElementById('checkout-button');
+             const checkoutForm = document.getElementById('checkout-form');
+             const sendToTelegramButton = document.getElementById('send-to-telegram');
+             const namaInput = document.getElementById('nama');
+             const alamatInput = document.getElementById('alamat');
+             const whatsappInput = document.getElementById('whatsapp');
+
+             let cart = [];
+
+             const telegramBotToken = '7944306970:AAFfZ2KYMrgRVeEu0dSDE-AiyuI5x_LJQBg';
+             const telegramChatId = '7706135364';
+
+             function updateCartItemCount() {
+                 cartItemCountSpan.textContent = cart.length;
+             }
+
+             function addToCart(product) {
+                 cart.push(product);
+                 updateCartItemCount();
+                 renderCartItems();
+             }
+
+             function removeFromCart(productId) {
+                 cart = cart.filter(item => item.id !== productId);
+                 updateCartItemCount();
+                 renderCartItems();
+             }
+
+             function renderCartItems() {
+                 cartItemsList.innerHTML = '';
+                 let total = 0;
+                 cart.forEach(item => {
+                     const listItem = document.createElement('li');
+                     listItem.innerHTML = `
+                         <span>${item.name}</span>
+                         <span>Rp ${item.price.toLocaleString()}</span>
+                         <button class="remove-from-cart" data-product-id="${item.id}">Hapus</button>
+                     `;
+                     cartItemsList.appendChild(listItem);
+                     total += item.price;
+                 });
+                 cartTotalElement.textContent = `Total: Rp ${total.toLocaleString()}`;
+
+                 const removeButtons = document.querySelectorAll('.remove-from-cart');
+                 removeButtons.forEach(button => {
+                     button.addEventListener('click', function() {
+                         const productIdToRemove = this.dataset.productId;
+                         removeFromCart(productIdToRemove);
+                     });
+                 });
+             }
+
+             function sendOrderToTelegram() {
+                 const nama = namaInput.value;
+                 const alamat = alamatInput.value;
+                 const whatsapp = whatsappInput.value;
+                 const total = cartTotalElement.textContent;
+
+                 if (!nama || !alamat || !whatsapp || cart.length === 0) {
+                     alert('Harap isi semua detail pengiriman dan pastikan keranjang tidak kosong.');
+                     return;
+                 }
+
+                 let message = `𝐍𝐚𝐦𝐚/username: ${nama}\nWhatsApp: ${whatsapp}\nAlamat: ${alamat}\n────────────────────\nKevin jasa sosmed.id\n────────────────────\n𝐋𝐢𝐬𝐭 𝐩𝐞𝐬𝐚𝐧𝐚𝐧 𝐤𝐚𝐦𝐮\n`;
+                 cart.forEach(item => {
+                     message += `${item.name} - Rp ${item.price.toLocaleString()}\n`;
+                 });
+                 message += `────────────────────\n${total}\n\n> 𝐒𝐞𝐠𝐞𝐫𝐚 𝐥𝐚𝐤𝐮𝐤𝐚𝐧 𝐩𝐚𝐲𝐦𝐞𝐧𝐭 𝐮𝐧𝐭𝐮𝐤 𝐦𝐞𝐥𝐚𝐧𝐣𝐮𝐭𝐤𝐚𝐧 𝐭𝐫𝐚𝐧𝐬𝐚𝐤𝐬𝐢 𝐝𝐚𝐧 𝐬𝐞𝐠𝐞𝐫𝐚 𝐤𝐚𝐦𝐢 𝐩𝐫𝐨𝐬𝐞𝐬 𝐩𝐞𝐬𝐚𝐧𝐚𝐧 𝐤𝐚𝐦𝐮`;
+
+                 const encodedMessage = encodeURIComponent(message);
+                 const whatsappLink = `https://wa.me/${whatsapp}?text=${encodedMessage}`;
+
+                 const telegramApiUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
+                 const telegramMessage = `Tautan WhatsApp Pesanan:\n${whatsappLink}`;
+
+                 fetch(telegramApiUrl, {
+                         method: 'POST',
+                         headers: {
+                             'Content-Type': 'application/json',
+                         },
+                         body: JSON.stringify({
+                             chat_id: telegramChatId,
+                             text: telegramMessage,
+                         }),
+                     })
+                     .then(response => response.json())
+                     .then(data => {
+                         if (data.ok) {
+                             alert('Tautan WhatsApp pesanan berhasil dikirim ke Telegram!');
+                             cart = [];
+                             updateCartItemCount();
+                             renderCartItems();
+                             checkoutForm.style.style.display = 'none';
+                             checkoutButton.style.display = 'block';
+                         } else {
+                             alert('Gagal mengirim tautan ke Telegram. Silakan coba lagi nanti.');
+                             console.error('Error sending message to Telegram:', data);
+                         }
+                     })
+                     .catch(error => {
+                         alert('Terjadi kesalahan dalam mengirim tautan ke Telegram.');
+                         console.error('Fetch error:', error);
+                     });
+             }
+
+             addToCartButtons.forEach(button => {
+                 button.addEventListener('click', function() {
+                     const productCard = this.parentNode;
+                     const productId = productCard.dataset.productId;
+                     const productName = productCard.dataset.productName;
+                     const productPrice = parseInt(productCard.dataset.productPrice);
+
+                     const productToAdd = {
+                         id: productId,
+                         name: productName,
+                         price: productPrice
+                     };
+
+                     addToCart(productToAdd);
+                 });
+             });
+
+             cartLink.addEventListener('click', function(event) {
+                 event.preventDefault();
+                 cartModal.style.display = 'block';
+                 renderCartItems();
+                 checkoutForm.style.display = 'none';
+                 checkoutButton.style.display = 'block';
+             });
+
+             checkoutButton.addEventListener('click', function() {
+                 checkoutButton.style.display = 'none';
+                 checkoutForm.style.display = 'block';
+             });
+
+             sendToTelegramButton.addEventListener('click', sendOrderToTelegram);
+
+             closeButton.addEventListener('click', function() {
+                 cartModal.style.display = 'none';
+                 checkoutForm.style.display = 'none';
+                 checkoutButton.style.display = 'block';
+             });
+
+             window.addEventListener('click', function(event) {
+                 if (event.target == cartModal) {
+                     cartModal.style.display = 'none';
+                     checkoutForm.style.display = 'none';
+                     checkoutButton.style.display = 'block';
+                 }
+             });
+
+             updateCartItemCount();
+         });
+     </script>
+ </body>
+ </html>
+
+
